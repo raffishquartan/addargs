@@ -1,13 +1,16 @@
 # addargs
 
-Add ignored arguments to a JavaScript function using higher-order-functions
+Add dummy, ignored arguments to a function so that an external API accepts it as a callback
 
 ## Overview
 
-Callbacks for an external API may specify additional parameters which are not needed. To make the callback's
-implementation clearer and cleaner it is best to omit such parameters from the callback.
+Callbacks for an external API may specify additional parameters which 
+are not needed. Although these can be specified in the function this 
+makes its implementation less clear and risks their unexpected use. 
+`addargs` functions allows such parameters to be omitted.
 
-This package contains higher-order functions which allow creation of a callback that has the expected function signature, but which only specifies the parameters it actually uses. For example, the `connect` function in `react-redux` takes a callback `mapStateToProps` with the signature (docs)[https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options]:
+For example, the `connect` function in `react-redux` takes a callback 
+`mapStateToProps` with the signature (docs)[https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options]:
 
 ````
 mapStateToProps(state, [ownProps]): stateProps
@@ -25,7 +28,9 @@ const mapStateToProps = addFirstArg((ownProps) => {
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint your code. 
+In lieu of a formal styleguide, take care to maintain the existing 
+coding style. Add unit tests for any new or changed functionality. 
+Lint your code. 
 
 ## Changelog
 
@@ -33,7 +38,7 @@ v0.0.1 - initial version
 
 ## Credits
 
-h/t [Bergi](http://stackoverflow.com/a/41625616/1149568) for inspiring this package
+h/t [Bergi](http://stackoverflow.com/a/41625616/1149568) for inspiration
 
 ## License
 
