@@ -1,6 +1,6 @@
 {
   "name": "addargs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add auto-ignored arguments to a function so that an external API accepts it as a callback",
   "main": "./dist/addArgs.js",
   "scripts": {

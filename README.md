@@ -36,6 +36,7 @@ Lint your code.
 ## Changelog
 
 v0.0.1 - initial version
+v0.0.2 - package.json bug fix
 
 ## Credits
 
