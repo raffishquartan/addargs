@@ -10,13 +10,14 @@ makes its implementation less clear and risks their unexpected use.
 `addargs` functions allows such parameters to be omitted.
 
 For example, the `connect` function in `react-redux` takes a callback 
-`mapStateToProps` with the signature (docs)[https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options]:
+`mapStateToProps` with the signature ([docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options)):
 
 ````
 mapStateToProps(state, [ownProps]): stateProps
 ````
 
-If an implementation of this method only uses `ownProps` this can be enforced as follows:
+If an implementation of this method only uses `ownProps` then this can 
+be enforced as follows:
 
 ````
 const mapStateToProps = addFirstArg((ownProps) => {
