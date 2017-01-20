@@ -2,7 +2,7 @@
   "name": "addargs",
   "version": "0.0.1",
   "description": "Add auto-ignored arguments to a function so that an external API accepts it as a callback",
-  "main": "./distribution/addArgs.js",
+  "main": "./dist/addArgs.js",
   "scripts": {
     "lint": "eslint src tools",
     "test": "mocha \"src/**/*.test.js\" --compilers js:babel-register",
